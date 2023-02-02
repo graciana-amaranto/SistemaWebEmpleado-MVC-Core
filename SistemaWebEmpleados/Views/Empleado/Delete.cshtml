@@ -1,0 +1,13 @@
+﻿@model SistemaWebEmpleados.Models.Empleado
+
+<div class="container">
+    <h1>
+        Empleado: @Model.Nombre
+    </h1>
+    
+    @using (Html.BeginForm("Delete", "Empleado", FormMethod.Post))
+    {
+        <input type="submit" action="Delete" value="Eliminar" />
+        @Html.ActionLink("Volver a Index", "Index", "Empleado")
+    }
+</div>
